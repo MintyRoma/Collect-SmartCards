@@ -44,6 +44,10 @@
             this.DelCardMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddCardMeniItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CardListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.дезигнToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.темнаяТемаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oFFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,10 +162,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Play", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CardMenu});
+            this.CardMenu,
+            this.дезигнToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(634, 25);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
@@ -181,14 +189,14 @@
             // DelCardMenuItem
             // 
             this.DelCardMenuItem.Name = "DelCardMenuItem";
-            this.DelCardMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.DelCardMenuItem.Size = new System.Drawing.Size(169, 22);
             this.DelCardMenuItem.Text = "Удалить карту";
             this.DelCardMenuItem.Click += new System.EventHandler(this.DelCardMenuItem_Click);
             // 
             // AddCardMeniItem
             // 
             this.AddCardMeniItem.Name = "AddCardMeniItem";
-            this.AddCardMeniItem.Size = new System.Drawing.Size(180, 22);
+            this.AddCardMeniItem.Size = new System.Drawing.Size(169, 22);
             this.AddCardMeniItem.Text = "Добавить карту";
             this.AddCardMeniItem.Click += new System.EventHandler(this.AddCardMeniItem_Click);
             // 
@@ -197,6 +205,40 @@
             this.CardListMenuItem.Name = "CardListMenuItem";
             this.CardListMenuItem.Size = new System.Drawing.Size(180, 22);
             this.CardListMenuItem.Text = "Список карт";
+            this.CardListMenuItem.Click += new System.EventHandler(this.CardListMenuItem_Click);
+            // 
+            // дезигнToolStripMenuItem
+            // 
+            this.дезигнToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.темнаяТемаToolStripMenuItem});
+            this.дезигнToolStripMenuItem.Font = new System.Drawing.Font("Play", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.дезигнToolStripMenuItem.Name = "дезигнToolStripMenuItem";
+            this.дезигнToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.дезигнToolStripMenuItem.Text = "Дезигн";
+            // 
+            // темнаяТемаToolStripMenuItem
+            // 
+            this.темнаяТемаToolStripMenuItem.CheckOnClick = true;
+            this.темнаяТемаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.oNToolStripMenuItem,
+            this.oFFToolStripMenuItem});
+            this.темнаяТемаToolStripMenuItem.Name = "темнаяТемаToolStripMenuItem";
+            this.темнаяТемаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.темнаяТемаToolStripMenuItem.Text = "Темная тема";
+            // 
+            // oNToolStripMenuItem
+            // 
+            this.oNToolStripMenuItem.CheckOnClick = true;
+            this.oNToolStripMenuItem.Name = "oNToolStripMenuItem";
+            this.oNToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oNToolStripMenuItem.Text = "ON";
+            // 
+            // oFFToolStripMenuItem
+            // 
+            this.oFFToolStripMenuItem.CheckOnClick = true;
+            this.oFFToolStripMenuItem.Name = "oFFToolStripMenuItem";
+            this.oFFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oFFToolStripMenuItem.Text = "OFF";
             // 
             // Identify
             // 
@@ -244,5 +286,9 @@
         private System.Windows.Forms.ToolStripMenuItem DelCardMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddCardMeniItem;
         private System.Windows.Forms.ToolStripMenuItem CardListMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem дезигнToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem темнаяТемаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oNToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oFFToolStripMenuItem;
     }
 }

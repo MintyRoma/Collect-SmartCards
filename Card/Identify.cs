@@ -220,12 +220,17 @@ namespace Card
 
         private void Identify_FormClosing(object sender, FormClosingEventArgs e)
         {
+            SaveCards();
+        }
+
+        private void SaveCards()
+        {
             File.Delete("ATRs.txt");
             FileStream fs = File.Create("ATRs.txt");
             fs.Close();
             StreamWriter io = new StreamWriter("ATRs.txt");
-            
-            foreach(string atr in atrs)
+
+            foreach (string atr in atrs)
             {
                 io.WriteLine(atr);
             }
@@ -255,7 +260,11 @@ namespace Card
         {
             string atr = BitConverter.ToString(card.Atr ?? new byte[0]);
             if (atr == "") return;
-            if (atrs.Contains(atr)) atrs.Remove(atr);
+            if (atrs.Contains(atr))
+            {
+                atrs.Remove(atr);
+                SaveCards();
+            }
             else MessageBox.Show("Список карт не содержит данную карту");
         }
 
@@ -263,8 +272,18 @@ namespace Card
         {
             string atr = BitConverter.ToString(card.Atr ?? new byte[0]);
             if (atr == "") ;
-            if (!atrs.Contains(atr)) atrs.Add(atr);
+            if (!atrs.Contains(atr))
+            {
+                atrs.Add(atr);
+                SaveCards();
+            }
             else MessageBox.Show("Список карт уже содержит данную карту");
+        }
+
+        private void CardListMenuItem_Click(object sender, EventArgs e)
+        {
+            CardList cl = new CardList();
+            cl.Show();
         }
     }
 }
