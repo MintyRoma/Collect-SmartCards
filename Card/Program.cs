@@ -15,7 +15,7 @@ namespace Card
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run(new Identify());
+            Application.Run(new MainForm());
         }
     }
 }
